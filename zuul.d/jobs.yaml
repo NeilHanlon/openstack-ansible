@@ -544,6 +544,71 @@
     nodeset: centos-8
     timeout: 10800
 
+# rocky linux 8
+- job:
+    name: openstack-ansible-deploy-aio_lxc-rocky-8
+    parent: openstack-ansible-deploy-aio
+    nodeset: rocky-8
+
+- job:
+    name: openstack-ansible-deploy-infra_lxc-rocky-8
+    parent: openstack-ansible-deploy-aio
+    nodeset: rocky-8
+
+- job:
+    name: openstack-ansible-deploy-hosts_lxc-rocky-8
+    parent: openstack-ansible-deploy-aio
+    nodeset: rocky-8
+
+- job:
+    name: openstack-ansible-deploy-hosts_metal-rocky-8
+    parent: openstack-ansible-deploy-aio
+    nodeset: rocky-8
+
+- job:
+    name: openstack-ansible-deploy-aio_ceph-rocky-8
+    parent: openstack-ansible-deploy-aio
+    nodeset: rocky-8
+
+- job:
+    name: openstack-ansible-upgrade-aio_lxc-rocky-8
+    parent: openstack-ansible-deploy-aio
+    nodeset: rocky-8
+    timeout: 10800
+
+- job:
+    name: openstack-ansible-upgrade-infra_lxc-rocky-8
+    parent: openstack-ansible-deploy-aio
+    nodeset: rocky-8
+    timeout: 10800
+
+- job:
+    name: openstack-ansible-deploy-aio_metal-rocky-8
+    parent: openstack-ansible-deploy-aio
+    nodeset: rocky-8
+
+- job:
+    name: openstack-ansible-deploy-aio_telemetry_metal-rocky-8
+    parent: openstack-ansible-deploy-aio
+    nodeset: rocky-8
+
+- job:
+    name: openstack-ansible-deploy-aio_distro_metal-rocky-8
+    parent: openstack-ansible-deploy-aio-distro
+    nodeset: rocky-8
+
+- job:
+    name: openstack-ansible-upgrade-aio_ceph-rocky-8
+    parent: openstack-ansible-deploy-aio
+    nodeset: rocky-8
+    timeout: 10800
+
+- job:
+    name: openstack-ansible-upgrade-aio_metal-rocky-8
+    parent: openstack-ansible-deploy-aio
+    nodeset: rocky-8
+    timeout: 10800
+
 # debian buster
 - job:
     name: openstack-ansible-deploy-aio_telemetry_metal-debian-buster
