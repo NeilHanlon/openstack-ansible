@@ -71,7 +71,7 @@ determine_distro
 
 # Install the base packages
 case ${DISTRO_ID} in
-    centos|rhel)
+    rocky|centos|rhel)
         dnf -y install \
           git curl autoconf gcc gcc-c++ nc \
           python3 python3-devel libselinux-python3 \
